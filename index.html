@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/input.css">
+    <link href="/dist/output.css" rel="stylesheet">
+  
+     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<!-- Centrer le milieu de la page le composant -->
+<body class="bg-gray-200 font-['Poppins'] flex justify-center items-center h-screen">
+<main class="container mx-auto flex flex-col justify-center  ">
+    <div class="bg-white w-[58vh] h-[46vh] mx-auto rounded-br-[16vh] rounded-xl">
+        <form class="flex space-x-4 justify-start align-center mt-12 font-bold text-slate-600 px-6" >
+          <div class="flex flex-col justify-start text-md">
+              <label for="day" class="mb-1" id="day_label">DAY</label>
+            <input type="number" name="" id="day" min="1" max="31" class="w-[12vh] h-12 rounded-lg border border-slate-300 " placeholder="DD" >
+          </div>
+          <div class="flex flex-col text-md">
+              <label for="month" class="mb-1" id="month_label">MONTH</label>
+            <input type="number" min="1" max="12" name="" id="month" class="w-[12vh] h-12 rounded-lg  border-slate-300 border " placeholder="MM">
+          </div>
+          <div class="flex flex-col text-md">
+              <label for="year" class="mb-1" id="year_label">YEAR</label>
+            <input type="number" name="" id="year" min="1970" max="" class="w-[12vh] h-12 rounded-lg border border-slate-300" placeholder="YYYY" step="1" pattern="[0-4]" maxlength="4" required>
+          </div>
+        </form>
+        <div class="flex justify-center align-center items-center mt-10 mb-6" >
+          <div class="bg-slate-300 h-md w-[70vh] h-[0.8px]  relative mx-[3vh]"></div>
+          <div class="circle_arrow bg-slate-900 rounded-full h-16 w-16 absolute flex -mr-[45.7vh] cursor-pointer">
+            <img src="./img/icon-arrow.svg" alt="arrow down" class="w-8 mx-auto  arrow_down">
+          </div>
+        </div>
+        <div class="px-6 ">
+          <ul class="text-7xl flex flex-col italic font-extrabold">
+            <li class=""><p><span id="years_display" class="text-purple-600">--</span>years</p></li>
+            <li class=""><p><span id="months_display" class="text-purple-600" >--</span>months</p></li>
+            <li class=""><p><span id="days_display" class="text-purple-600">--</span>days</p></li>
+          </ul>
+        </div>
+        
+    </div>
+
+</main>
+<script src="script.js"> </script>
+</body>
+</html>
